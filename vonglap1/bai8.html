@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="startGame()">Chơi</button>
+<script>
+    function startGame() {
+        var minRange = parseInt(prompt("Nhập vào số nhỏ nhất trong khoảng đoán số:"));
+        var maxRange = parseInt(prompt("Nhập vào số lớn nhất trong khoảng đoán số:"));
+
+        // Kiểm tra xem minRange và maxRange có hợp lệ không
+        if (isNaN(minRange) || isNaN(maxRange) || minRange >= maxRange) {
+            alert("Vui lòng nhập lại khoảng đoán số hợp lệ!");
+            return;
+        }
+
+        var randomNumber = Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange;
+        var attemptsLeft = 3;
+
+        while (attemptsLeft > 0) {
+            var userGuess = parseInt(prompt("Bạn đoán số nào? (Bạn còn " + attemptsLeft + " lần đoán)"));
+
+            if (isNaN(userGuess)) {
+                alert("Vui lòng nhập một số!");
+                continue;
+            }
+
+            if (userGuess === randomNumber) {
+                alert("Chúc mừng! Bạn đã đoán đúng số " + randomNumber);
+                break;
+            } else if (userGuess < randomNumber) {
+                alert("Số bạn đoán nhỏ hơn. Hãy thử lại!");
+            } else {
+                alert("Số bạn đoán lớn hơn. Hãy thử lại!");
+            }
+
+            attemptsLeft--;
+        }
+
+        if (attemptsLeft === 0) {
+            alert("Bạn đã hết số lần đoán. Số đúng là: " + randomNumber);
+        }
+    }
+</script>
+</body>
+</html>

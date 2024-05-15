@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="sumFirstThirtyDivisibleBySeven()">Calculate Sum</button>
+<p id="result"></p>
+</body>
+<script>
+    function sumFirstThirtyDivisibleBySeven() {
+        var sum = 0;
+        var count = 0;
+        var num = 0;
+
+        // Tìm và tính tổng 30 số đầu tiên chia hết cho 7
+        while (count < 30) {
+            if (num % 7 === 0 && num != 0) {
+                sum += num;
+                count++;
+            }
+            num++;
+        }
+
+        // Hiển thị tổng
+        document.getElementById("result").innerHTML = "Tổng của 30 số đầu tiên chia hết cho 7 là: " + sum;
+    }
+</script>
+</html>

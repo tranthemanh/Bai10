@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="checkTemperature()">Check Temperature</button>
+<script>
+    function checkTemperature() {
+        // Lấy nhiệt độ hiện tại từ người dùng
+        var temperature = prompt("Hãy nhập nhiệt độ hiện tại:");
+
+        // Chuyển đổi giá trị nhập vào sang số
+        temperature = parseFloat(temperature);
+
+        // Kiểm tra giá trị nhiệt độ và hiển thị thông báo phù hợp
+        if (temperature > 100) {
+            alert("Nhiệt độ quá cao! Hãy giảm nhiệt độ.");
+        } else if (temperature < 20) {
+            alert("Nhiệt độ quá thấp! Hãy tăng nhiệt độ.");
+        } else {
+            alert("Nhiệt độ hiện tại ổn định.");
+        }
+    }
+</script>
+</body>
+</html>

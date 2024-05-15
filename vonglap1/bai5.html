@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="sumFirstTwentyFibonacci()">Calculate Sum</button>
+<p id="result"></p>
+</body>
+<script>
+    function sumFirstTwentyFibonacci() {
+        var num1 = 0, num2 = 1, nextNum;
+        var sum = num1 + num2; // Khởi tạo tổng với hai số đầu tiên của dãy Fibonacci
+        var count = 2; // Bắt đầu đếm từ 2 vì đã có hai số đầu tiên
+
+        // Tạo và tính tổng 20 số đầu tiên trong dãy Fibonacci
+        for (var i = 3; i <= 20; i++) { // Bắt đầu từ số thứ 3 đến số thứ 20
+            nextNum = num1 + num2;
+            sum += nextNum;
+            num1 = num2;
+            num2 = nextNum;
+        }
+
+        // Hiển thị tổng
+        document.getElementById("result").innerHTML = "Tổng của 20 số đầu tiên trong dãy Fibonacci là: " + sum;
+    }
+</script>
+</html>

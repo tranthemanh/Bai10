@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="generateFibonacci()">Generate Fibonacci</button>
+<p id="result"></p>
+</body>
+<script>
+    function generateFibonacci() {
+        var fibSequence = [];
+        var num1 = 0, num2 = 1, nextNum;
+
+        // Tạo 20 số đầu tiên trong dãy Fibonacci
+        for (var i = 0; i < 20; i++) {
+            fibSequence.push(num1);
+            nextNum = num1 + num2;
+            num1 = num2;
+            num2 = nextNum;
+        }
+
+        // Hiển thị dãy Fibonacci
+        document.getElementById("result").innerHTML = fibSequence.join(", ");
+    }
+</script>
+</html>

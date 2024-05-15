@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="printFizzBuzz()">Print FizzBuzz</button>
+<div id="result"></div>
+</body>
+<script>
+    function printFizzBuzz() {
+        var result = '';
+
+        // Duyệt qua các số từ 1 đến 100
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                result += 'FizzBuzz<br>';
+            } else if (i % 3 === 0) {
+                result += 'Fizz<br>';
+            } else if (i % 5 === 0) {
+                result += 'Buzz<br>';
+            } else {
+                result += i + '<br>';
+            }
+        }
+
+        // Hiển thị kết quả
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</html>
