@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhap n');
+    let S = 0;
+    //bai 1
+    // for (let i = 1; i <=n ; i++){
+    //     S += i*(i+1);
+    //     console.log(S);
+    // }
+
+    //Bai 2
+    // for (let i = 0; i <=n; i++){
+    //     S += (2*i+1)/(2*i+2)
+    //     console.log(S.toFixed(2))
+    // }
+    // document.write(S.toFixed(2)+'<br>')
+
+    //Bai 3
+    for (let i = 1; i <=n; i++){
+        S += i/(i+2);
+        console.log(S);
+    }
+    document.write('S bang '+ +S.toFixed(2) + 100 )
+</script>
+</body>
+</html>

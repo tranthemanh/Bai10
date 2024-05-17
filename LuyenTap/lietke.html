@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhap a");
+
+    //Bai 1:
+    // Liệt kê các ước số nguyên dương của a
+    // Liệt kê các bội số nhỏ hơn 100 của a
+    // for (let i = 0; i < a; i++){
+    //     if (a%i ===0){
+    //         document.write("Ước so cua a: "+ i +'<br>');
+    //     }
+    // }
+    // for (let j = 0; j< a; j++){
+    //     if (j*a <= 100){
+    //         document.write("Boi so cua a nho hon 100 la: "+ j +'<br>');
+    //     }
+    // }
+
+    //Bai 2:
+    // "Tìm ước số nguyên lẻ lớn nhất của a
+    // Liệt kê bội chẵn nhỏ nhất của a"
+    for (let i = a -1; i >=1; i -=2){
+        if (a%i ===0){
+            document.write('uoc so nguyen le lon nhat la: '+i+'<br>');
+            break;
+        }
+    }
+    for (let j = 2; j<= a; j++){
+        if ((j*a)%2 === 0){
+            document.write('boi so ngo nhat cua a la: '+ +(j*a) +'<br>');
+            break;
+        }
+    }
+</script>
+</body>
+</html>

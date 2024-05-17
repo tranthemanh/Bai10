@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    pre {
+        font-family: monospace;
+        color: red;
+    }
+</style>
+<body>
+<h3>Heartbeat</h3>
+<pre id="heart"></pre>
+
+<script>
+    // Hàm để in ra hình trái tim
+    function printHeart() {
+        var heart = '';
+        // Hàng đầu tiên
+        heart += '  ***   ***  \n';
+        // Hai hàng tiếp theo
+        for (var i = 0; i < 3; i++) {
+            heart += '*******';
+            for (var j = 0; j < 5; j++) {
+                heart += '*';
+            }
+            heart += '\n';
+        }
+        // Các hàng cuối cùng
+        heart += ' ********* \n';
+        heart += '  *******  \n';
+        heart += '   *****   \n';
+        heart += '    ***    \n';
+        heart += '     *     \n';
+
+        return heart;
+    }
+
+    // In hình trái tim ban đầu
+    document.getElementById('heart').textContent = printHeart();
+
+    // Tạo hiệu ứng nhịp đập
+    var isRed = true;
+    setInterval(function() {
+        if (isRed) {
+            document.getElementById('heart').style.color = 'black';
+        } else {
+            document.getElementById('heart').style.color = 'red';
+        }
+        isRed = !isRed;
+    }, 500); // Thay đổi màu sau mỗi 500ms
+</script>
+</body>
+</html>

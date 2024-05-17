@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    pre {
+        font-family: monospace;
+    }
+</style>
+<body>
+<h3>Hình chữ nhật rỗng ở giữa</h3>
+<pre id="rectangle"></pre>
+
+<script>
+    // Kích thước của hình chữ nhật
+    var width = 10;
+    var height = 6;
+
+    // Tạo chuỗi đại diện cho hình chữ nhật
+    var rectangle = '';
+    for (var i = 0; i < height; i++) {
+        for (var j = 0; j < width; j++) {
+            // Kiểm tra xem có phải là cạnh ngoài không
+            if (i === 0 || i === height - 1 || j === 0 || j === width - 1) {
+                rectangle += '*';
+            } else {
+                rectangle += ' ';
+            }
+        }
+        rectangle += '\n';
+    }
+
+    // In hình chữ nhật
+    document.getElementById('rectangle').textContent = rectangle;
+</script>
+</body>
+</html>

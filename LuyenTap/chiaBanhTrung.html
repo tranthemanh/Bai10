@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chia Banh Chung</title>
+</head>
+<body>
+<script>
+    let N = +prompt("Nhap so nhom: ");
+    let arr = [];
+    let bc = 0;
+
+    for (let i = 0; i < N; i++){
+        let v = +prompt("Nhập phần tử thứ "+ (i+1)+":");
+        arr.push(v);
+    }
+    document.write('Số nhóm: '+ N+'<br>');
+    document.write('Số thành viên của các nhóm: '+ arr+'<br>');
+
+    for (let j = 0; j <arr.length; j++){
+        bc += arr[j];
+    }
+    document.write("So bánh chưng tối thiểu cần để chia đủ cho mọi người ăn là: "+ +(bc/4))
+</script>
+</body>
+</html>

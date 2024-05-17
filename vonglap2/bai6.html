@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    pre {
+        font-family: monospace;
+    }
+</style>
+<body>
+<h3>Heart Shape</h3>
+<pre id="heart"></pre>
+
+<script>
+    // Hàm để in ra hình trái tim
+    function printHeart() {
+        var heart = '';
+        // Hàng đầu tiên
+        heart += '  ***   ***  \n';
+        // Hai hàng tiếp theo
+        for (var i = 0; i < 3; i++) {
+            heart += '*******';
+            for (var j = 0; j < 5; j++) {
+                heart += '*';
+            }
+            heart += '\n';
+        }
+        // Các hàng cuối cùng
+        heart += ' ********* \n';
+        heart += '  *******  \n';
+        heart += '   *****   \n';
+        heart += '    ***    \n';
+        heart += '     *     \n';
+
+        return heart;
+    }
+
+    // In hình trái tim
+    document.getElementById('heart').textContent = printHeart();
+</script>
+</body>
+</html>

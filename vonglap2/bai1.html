@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Hàm để tạo dãy Fibonacci với n phần tử
+    function generateFibonacci(n) {
+        var fibonacciSequence = [];
+        var num1 = 0, num2 = 1;
+        // Thêm hai số đầu tiên vào dãy Fibonacci
+        fibonacciSequence.push(num1);
+        fibonacciSequence.push(num2);
+        // Tạo các số Fibonacci tiếp theo
+        for (var i = 2; i < n; i++) {
+            var nextNum = num1 + num2;
+            fibonacciSequence.push(nextNum);
+            num1 = num2;
+            num2 = nextNum;
+        }
+        // Trả về dãy Fibonacci
+        return fibonacciSequence;
+    }
+    // Gọi hàm để tạo dãy Fibonacci với 20 phần tử và in ra màn hình
+    var fibonacciSeries = generateFibonacci(20);
+    document.write("Dãy Fibonacci: " + fibonacciSeries.join(", "));
+</script>
+</body>
+</html>

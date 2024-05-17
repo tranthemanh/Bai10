@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    pre {
+        font-family: monospace;
+    }
+</style>
+<body>
+
+<h4>Góc vuông ở trên cùng, bên phải</h4>
+<pre id="triangle1"></pre>
+
+<h4>Góc vuông ở trên cùng, bên trái</h4>
+<pre id="triangle2"></pre>
+
+<h4>Góc vuông ở dưới cùng, bên phải</h4>
+<pre id="triangle3"></pre>
+
+<h4>Góc vuông ở dưới cùng, bên trái</h4>
+<pre id="triangle4"></pre>
+
+<script>
+    // Hàm để in ra tam giác vuông với góc vuông ở trên cùng, bên phải
+    function printTriangle1(height) {
+        var triangle = '';
+        for (var i = 1; i <= height; i++) {
+            for (var j = 1; j <= height - i; j++) {
+                triangle += ' ';
+            }
+            for (var k = 1; k <= i; k++) {
+                triangle += '*';
+            }
+            triangle += '\n';
+        }
+        return triangle;
+    }
+
+    // In tam giác
+    document.getElementById('triangle1').textContent = printTriangle1(5);
+
+    // Hàm để in ra tam giác vuông với góc vuông ở trên cùng, bên trái
+    function printTriangle2(height) {
+        var triangle = '';
+        for (var i = 1; i <= height; i++) {
+            for (var j = 1; j <= i; j++) {
+                triangle += '*';
+            }
+            triangle += '\n';
+        }
+        return triangle;
+    }
+
+    // In tam giác
+    document.getElementById('triangle2').textContent = printTriangle2(5);
+
+    // Hàm để in ra tam giác vuông với góc vuông ở dưới cùng, bên phải
+    function printTriangle3(height) {
+        var triangle = '';
+        for (var i = height; i >= 1; i--) {
+            for (var j = 1; j <= height - i; j++) {
+                triangle += ' ';
+            }
+            for (var k = 1; k <= i; k++) {
+                triangle += '*';
+            }
+            triangle += '\n';
+        }
+        return triangle;
+    }
+
+    // In tam giác
+    document.getElementById('triangle3').textContent = printTriangle3(5);
+
+    // Hàm để in ra tam giác vuông với góc vuông ở dưới cùng, bên trái
+    function printTriangle4(height) {
+        var triangle = '';
+        for (var i = height; i >= 1; i--) {
+            for (var j = 1; j <= i; j++) {
+                triangle += '*';
+            }
+            triangle += '\n';
+        }
+        return triangle;
+    }
+
+    // In tam giác
+    document.getElementById('triangle4').textContent = printTriangle4(5);
+</script>
+</body>
+</html>

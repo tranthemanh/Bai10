@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+
+<body>
+<h1>Bảng cửu chương</h1>
+<div id="bangCuuChuong">
+
+</div>
+
+</body>
+<script>
+    let bangCuuChuong = document.getElementById('bangCuuChuong');
+    let table = document.createElement("table");
+
+    for (let i = 1; i <=10; i++){
+        let row = document.createElement("tr");
+
+        for (let j = 1; j <=10; j++){
+            let cell = document.createElement("td");
+            cell.innerText = `${i} x ${j} = ${i * j}`;
+            row.appendChild(cell)
+        }
+        table.appendChild(row);
+
+    }
+    bangCuuChuong.appendChild(table);
+</script>
+</html>

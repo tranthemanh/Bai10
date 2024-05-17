@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhap a')
+    let b = +prompt('Nhap b')
+    let dem = 0;
+    let s = 0;
+
+    for (let i =a; i <= b; i++){
+        if (i % 5 === 2){
+            dem++;
+            s += dem;
+        }
+    }
+    document.write("Nhung so chia het cho 5 du 2 la : " + dem + "<br>");
+    document.write("Trung bình các số chia 5 dư 2 là: " + s/dem);
+</script>
+</body>
+</html>
